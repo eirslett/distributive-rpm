@@ -1,0 +1,41 @@
+{
+    "Name": "vault health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "vault installation",
+            "Check": "installed",
+            "Parameters": ["vault"]
+        },
+        {
+            "Name": "vault systemd service file present",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/vault.service"]
+        },
+        {
+            "Name": "vault configuration directory",
+            "Check": "directory",
+            "Parameters": ["/etc/vault"]
+        },
+        {
+            "Name": "vault configuration file",
+            "Check": "file",
+            "Parameters": ["/etc/vault/vault.config"]
+        },
+        {
+            "Name": "vault systemd service enabled",
+            "Check": "systemctlLoaded",
+            "Parameters": ["vault.service"]
+        },
+        {
+            "Name": "vault port open",
+            "Check": "port",
+            "Parameters": ["8200"]
+        },
+        {
+            "Name": "vault unseal script",
+            "Check": "file",
+            "Parameters": ["/etc/vault/vault.unseal"]
+        }
+    ]
+}
