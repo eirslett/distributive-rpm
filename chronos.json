@@ -53,6 +53,11 @@
             "Parameters": ["/etc/chronos/conf/mesos_framework_name"]
         },
         {
+            "Name": "chronos systemd service symlink present",
+            "Check": "symlink",
+            "Parameters": ["/etc/systemd/system/multi-user.target.wants/chronos.service"]
+        },
+        {
             "Name": "chronos systemd service enabled",
             "Check": "systemctlLoaded",
             "Parameters": ["chronos.service"]
