@@ -1,0 +1,31 @@
+{
+    "Name": "nginx health check",
+    "Notes": "For use with Microservices Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "nginx installation check",
+            "Check": "installed",
+            "Parameters": ["nginx"]
+        },
+        {
+            "Name": "nginx running check",
+            "Check": "running",
+            "Parameters": ["nginx"]
+        },
+        {
+            "Name": "nginx ssl directory check",
+            "Check": "directory",
+            "Parameters": ["/etc/nginx/ssl"]
+        },
+        {
+            "Name": "nginx ssl certificate check",
+            "Check": "file",
+            "Parameters": ["/etc/nginx/ssl/nginx.cert"]
+        },
+        {
+            "Name": "nginx ssl key check",
+            "Check" : "file",
+            "Parameters": ["/etc/nginx/ssl/nginx.key"]
+        }
+    ]
+}
