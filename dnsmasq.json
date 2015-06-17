@@ -1,0 +1,46 @@
+{
+    "Name": "dnsmasq health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "dnsmasq installation",
+            "Check": "installed",
+            "Parameters": ["dnsmasq"]
+        },
+        {
+            "Name": "bind-utils installation",
+            "Check": "installed",
+            "Parameters": ["bind-utils"]
+        },
+        {
+            "Name": "NetworkManager installation",
+            "Check": "installed",
+            "Parameters": ["NetworkManager"]
+        },
+        {
+            "Name": "dnsmasq configuration directory",
+            "Check": "directory",
+            "Parameters": ["/etc/NetworkManager/dnsmasq.d"]
+        },
+        {
+            "Name": "dnsmasq consul configuration file",
+            "Check": "file",
+            "Parameters": ["/etc/dnsmasq.d/10-consul"]
+        },
+        {
+            "Name": "dnsmasq service enabled",
+            "Check": "systemctlLoaded",
+            "Parameters": ["dnsmassq.service"]
+        },
+        {
+            "Name": "NetworkManager configuration exists",
+            "Check": "file",
+            "Parameters": ["/etc/NetworkManager/NetworkManager.conf"]
+        },
+        {
+            "Name": "resolv.conf exists",
+            "Check": "file",
+            "Parameters": ["/etc/resolv.conf"]
+        }
+    ]
+}
