@@ -1,0 +1,61 @@
+{
+    "Name": "docker health check",
+    "Notes": "For use with Microservices Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "device-mapper-libs installation check",
+            "Check": "installed",
+            "Parameters": ["device-mapper-libs"]
+        },
+        {
+            "Name": "docker installation check",
+            "Check": "installed",
+            "Parameters": ["docker"]
+        },
+        {
+            "Name": "docker dns configuration file",
+            "Check": "file",
+            "Parameters": ["/etc/sysconfig/docker-network"]
+        },
+        {
+            "Name": "docker systemd service enabled",
+            "Check": "systemctlLoaded",
+            "Parameters": ["docker.service"]
+        },
+        {
+            "Name": "docker collectd plugin dependency - py-dateutil",
+            "Check": "installed",
+            "Parameters": ["py-dateutil"]
+        },
+        {
+            "Name": "docker collectd plugin dependency - docker-py",
+            "Check": "installed",
+            "Parameters": ["docker-py"]
+        },
+        {
+            "Name": "collectd config directory",
+            "Check": "directory",
+            "Parameters": ["/etc/collectd.d"]
+        },
+        {
+            "Name": "collectd plugin directory",
+            "Check": "directory",
+            "Parameters": ["/usr/share/collectd/plugins"]
+        },
+        {
+            "Name": "collectd docker plugin - dockerplugin.py",
+            "Check": "file",
+            "Parameters": ["/usr/share/collectd/plugins/dockerplugin.py"]
+        },
+        {
+            "Name": "collectd docker plugin - dockerplugin.db",
+            "Check": "file",
+            "Parameters": ["/usr/share/collectd/plugins/dockerplugin.db"]
+        },
+        {
+            "Name": "collectd docker plugin config file",
+            "Check": "file",
+            "Parameters": ["/etc/collectd.d/docker.conf"]
+        }
+    ]
+}
