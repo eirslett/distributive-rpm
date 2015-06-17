@@ -1,0 +1,66 @@
+{
+    "Name": "chronos health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "mesosphere repo present in yum",
+            "Check": "repo",
+            "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
+        },
+        {
+            "Name": "chronos package installed",
+            "Check": "installed",
+            "Parameters": ["chronos"]
+        },
+        {
+            "Name": "chronos configuration directory present",
+            "Check": "directory",
+            "Parameters": ["/etc/chronos/conf"]
+        },
+        {
+            "Name": "chronos systemd service file present",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/chronos.service"]
+        },
+        {
+            "Name": "chronos binary present",
+            "Check": "file",
+            "Parameters": ["/usr/bin/chronos"]
+        },
+        {
+            "Name": "chronos zk_hosts configuration present",
+            "Check": "file",
+            "Parameters": ["/etc/chronos/conf/zk_hosts"]
+        },
+        {
+            "Name": "chronos master configuration present",
+            "Check": "file",
+            "Parameters": ["/etc/chronos/conf/master"]
+        },
+        {
+            "Name": "chronos hostname configuration present",
+            "Check": "file",
+            "Parameters": ["/etc/chronos/conf/hostname"]
+        },
+        {
+            "Name": "chronos http_port configuration present",
+            "Check": "file",
+            "Parameters": ["/etc/chronos/conf/http_port"]
+        },
+        {
+            "Name": "chronos mesos_framework_name configuration present",
+            "Check": "file",
+            "Parameters": ["/etc/chronos/conf/mesos_framework_name"]
+        },
+        {
+            "Name": "chronos systemd service enabled",
+            "Check": "systemctlLoaded",
+            "Parameters": ["chronos.service"]
+        },
+        {
+            "Name": "chronos consul configuration",
+            "Check": "file",
+            "Parameters": ["/etc/consul-template/config.d/chronos-consul.cfg"]
+        }
+    ]
+}
