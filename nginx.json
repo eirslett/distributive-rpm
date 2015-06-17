@@ -8,6 +8,12 @@
             "Parameters": ["nginx"]
         },
         {
+            "Name": "nginx checklist check",
+            "Notes": "Checking the existence of this file and its location",
+            "Check": "file",
+            "Parameters": ["/etc/distributive.d/nginx.json"]
+        },
+        {
             "Name": "nginx running check",
             "Check": "running",
             "Parameters": ["nginx"]
