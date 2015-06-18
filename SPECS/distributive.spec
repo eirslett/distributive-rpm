@@ -35,9 +35,17 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_datadir}/%{name}/chronos.json
+%{_datadir}/%{name}/collectd.json
+%{_datadir}/%{name}/common.json
 %{_datadir}/%{name}/consul.json
+%{_datadir}/%{name}/consul-template.json
 %{_datadir}/%{name}/dnsmasq.json
 %{_datadir}/%{name}/docker.json
+%{_datadir}/%{name}/haproxy.json
+%{_datadir}/%{name}/logrotate.json
+%{_datadir}/%{name}/logstash.json
+%{_datadir}/%{name}/marathon.json
+%{_datadir}/%{name}/mesos.json
 %{_datadir}/%{name}/nginx.json
 %{_datadir}/%{name}/vault.json
 %{_datadir}/%{name}/zookeeper.json
