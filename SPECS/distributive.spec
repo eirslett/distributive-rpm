@@ -8,8 +8,9 @@ URL:		https://github.com/CiscoCloud/distributive
 Source0:	https://github.com/CiscoCloud/distributive/archive/v%{version}.tar.gz
 
 BuildRequires:	golang
-
 #Requires:	
+# Debug info isn't really needed at this time
+%global debug_package %{nil}
 
 %description
 Distributive is a tool for running distributed health checks in datacenters. It was designed with Consul in mind, but is platform agnostic. It is simple to configure (with JSON checklists) and easy to deploy and run. It has no dependencies, and can be shipped as a speedy 4MB (yes, megabytes!) binary.
