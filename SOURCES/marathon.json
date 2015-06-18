@@ -3,6 +3,14 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
+            "Check" : "dockerImage",
+            "Parameters" : ["marathon"]
+        },
+        {
+            "Check" : "dockerRunning",
+            "Parameters" : ["marathon"]
+        }
+        {
             "Name": "marathon repo",
             "Check": "repo",
             "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
