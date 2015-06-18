@@ -5,7 +5,7 @@ Summary:	Distributive was designed with Consul in mind to perform distributed he
 
 License:	ASL 2.0:
 URL:		https://github.com/CiscoCloud/distributive
-Source0:	https://github.com/CiscoCloud/distributive/archive/v0.1.tar.gz
+Source0:	https://github.com/CiscoCloud/distributive/archive/v%{version}.tar.gz
 
 BuildRequires:	golang
 
@@ -25,7 +25,7 @@ go build .
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_bindir}/
 mkdir -p %{buildroot}%{_datadir}/%{name}
-mkdir -p %{buildroot}%{_sysconfdir}/%{name}
+mkdir -p %{buildroot}%{_sysconfdir}/%{name}.d
 cp -p %{name}-%{version} %{buildroot}%{_bindir}/%{name}
 cp -p %{_sourcedir}/*.json %{buildroot}%{_datadir}/%{name}/
 cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
@@ -56,7 +56,7 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 %{_datadir}/%{name}/samples/systemctl.json
 %{_datadir}/%{name}/samples/users-and-groups-fail.json
 %{_datadir}/%{name}/samples/users-and-groups.json
-%{_sysconfdir}/%{name}/
+%{_sysconfdir}/%{name}.d/
 
 %changelog
 
