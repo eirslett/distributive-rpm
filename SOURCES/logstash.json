@@ -1,0 +1,26 @@
+{
+    "Name": "logstash health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "logstash configuration directory",
+            "Check": "directory",
+            "Parameters": ["/etc/logstash.d/"]
+        },
+        {
+            "Name": "logstash configuration file",
+            "Check": "file",
+            "Parameters": ["/etc/logstash.d/logstash.conf"]
+        },
+        {
+            "Name": "logstash systemd service file",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/logstash.service"]
+        },
+        {
+            "Name": "rsyslog configuration file",
+            "Check": "file",
+            "Parameters": ["/etc/rsyslog.conf"]
+        }
+    ]
+}

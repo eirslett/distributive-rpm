@@ -1,0 +1,56 @@
+{
+    "Name": "mesos health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "mesos repo",
+            "Check": "repo",
+            "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
+        },
+        {
+            "Name": "mesos installation",
+            "Check": "installed",
+            "Parameters": ["mesos"]
+        },
+        {
+            "Name": "cyrus-sasl-md5 installation",
+            "Check": "installed",
+            "Parameters": ["cyrus-sasl-md5"]
+        },
+        {
+            "Name": "mesos zookeeper config",
+            "Check": "file",
+            "Parameters": ["/etc/mesos/zk"]
+        },
+        {
+            "Name": "mesos hostname config",
+            "Check": "file",
+            "Parameters": ["/etc/mesos/hostname"]
+        },
+        {
+            "Name": "mesos master systemd service present",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/mesos-master.service"]
+        },
+        {
+            "Name": "mesos nginx configuration",
+            "Check": "file",
+            "Parameters": ["/etc/mesos-leader.nginx"]
+        },
+        {
+            "Name": "mesos nginx unit file",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/nginx-mesos-leader.service"]
+        },
+        {
+            "Name": "mesos nginx env file",
+            "Check": "file",
+            "Parameters": ["/etc/default/nginx-mesos-leader.env"]
+        },
+        {
+            "Name": "nginx-mesos-leader service enabled",
+            "Check": "systemctlLoaded",
+            "Parameters": ["nginx-mesos-leader.service"]
+        }
+    ]
+}

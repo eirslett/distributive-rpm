@@ -1,0 +1,51 @@
+{
+    "Name": "common health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "timezone is UTC",
+            "Check": "symlink",
+            "Parameters": ["/etc/localtime"]
+        },
+        {
+            "Name": "httpd-tools installation",
+            "Check": "installed",
+            "Parameters": ["httpd-tools"]
+        },
+        {
+            "Name": "nc installation",
+            "Check": "installed",
+            "Parameters": ["nc"]
+        },
+        {
+            "Name": "openssh installation",
+            "Check": "installed",
+            "Parameters": ["openssh"]
+        },
+        {
+            "Name": "firewalld disabled",
+            "Check": "systemctlUnitFileStatus",
+            "Parameters": ["firewalld.service", "disabled"]
+        },
+        {
+            "Name": "pip installation",
+            "Check": "installed",
+            "Parameters": ["python-pip"]
+        },
+        {
+            "Name": "distributive installation",
+            "Check": "installed",
+            "Parameters": ["distributive"]
+        },
+        {
+            "Name": "distributive configuration directory",
+            "Check": "directory",
+            "Parameters": ["/etc/distributive.d/"]
+        },
+        {
+            "Name": "root ca present",
+            "Check": "file",
+            "Parameters": ["/etc/pki/ca-trust/source/anchors/cacert.pem"]
+        }
+    ]
+}

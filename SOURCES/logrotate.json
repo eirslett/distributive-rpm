@@ -1,0 +1,36 @@
+{
+    "Name": "logrotate health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "logrotate configuration file",
+            "Check": "file",
+            "Parameters": ["/etc/logrotate.conf"]
+        },
+        {
+            "Name": "logrotate for mesos",
+            "Check": "file",
+            "Parameters": ["/etc/logrotate.d/mesos"]
+        },
+        {
+            "Name": "logrotate mesos archive",
+            "Check": "directory",
+            "Parameters": ["/var/log/mesos/archive"]
+        },
+        {
+            "Name": "logrotate for docker",
+            "Check": "file",
+            "Parameters": ["/etc/logrotate.d/docker"]
+        },
+        {
+            "Name": "logrotate for zookeeper",
+            "Check": "file",
+            "Parameters": ["/etc/logrotate.d/zookeeper"]
+        },
+        {
+            "Name": "logrotate zookeeper archive",
+            "Check": "directory",
+            "Parameters": ["/var/log/zookeeper/archive"]
+        }
+    ]
+}

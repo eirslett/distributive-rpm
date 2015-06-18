@@ -1,0 +1,91 @@
+{
+    "Name": "marathon health check",
+    "Notes": "For use with Microservice Infrastructure",
+    "Checklist" : [
+        {
+            "Name": "marathon repo",
+            "Check": "repo",
+            "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
+        },
+        {
+            "Name": "marathon installation",
+            "Check": "installed",
+            "Parameters": ["marathon"]
+        },
+        {
+            "Name": "marathon wait script",
+            "Check": "file",
+            "Parameters": ["/usr/local/bin/marathon-wait-for-listen.sh"]
+        },
+        {
+            "Name": "marathon systemd unit file",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/marathon.service"]
+        },
+        {
+            "Name": "marathon configuration directory",
+            "Check": "directory",
+            "Parameters": ["/etc/marathon/conf/"]
+        },
+        {
+            "Name": "marathon zk configuration",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/conf/zk"]
+        },
+        {
+            "Name": "marathon ssl_keystore_password configuration",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/conf/ssl_keystore_password"]
+        },
+        {
+            "Name": "marathon http_port configuration",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/conf/http_port"]
+        },
+        {
+            "Name": "marathon event_subscriber configuration",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/conf/event_subscriber"]
+        },
+        {
+            "Name": "marathon hostname configuration",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/conf/hostname"]
+        },
+        {
+            "Name": "marathon collectd plugin",
+            "Check": "file",
+            "Parameters": ["/usr/share/collectd/plugins/marathon.py"]
+        },
+        {
+            "Name": "marathon collectd configuration",
+            "Check": "file",
+            "Parameters": ["/etc/collectd.d/marathon.conf"]
+        },
+        {
+            "Name": "marathon secret file",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/mesos_authentication_secret"]
+        },
+        {
+            "Name": "marathon nginx configuration",
+            "Check": "file",
+            "Parameters": ["/etc/marathon/marathon.nginx"]
+        },
+        {
+            "Name": "nginx-marathon unit file",
+            "Check": "file",
+            "Parameters": ["/usr/lib/systemd/system/nginx-marathon.service"]
+        },
+        {
+            "Name": "nginx-marathon env file",
+            "Check": "file",
+            "Parameters": ["/etc/default/nginx-marathon.env"]
+        },
+        {
+            "Name": "nginx-marathon service enabled",
+            "Check": "systemctlLoaded",
+            "Parameters": ["nginx-marathon.service"]
+        }
+    ]
+}
