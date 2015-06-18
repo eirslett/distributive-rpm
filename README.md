@@ -25,10 +25,10 @@ Then on the Microservices Infrastructure side, after this RPM is installed.
  2. Add a [distributive.yml](https://github.com/CiscoCloud/microservices-infrastructure/blob/master/roles/consul/tasks/distributive.yml) file to the `tasks`.
  3. Include the .yml file in the `main.yml` file.
  
- ## RPM Build
- RPM build target is RHEL6/7, Fedora >17; x86_64, i386 systems. The binary RPMs should install on most RPM systems without issue. Its common to perform the build process as dummy user.
- #### Build Procedure
- ######Build platform is CentOS >6, or Fedora >17
+## RPM Build
+RPM build target is RHEL6/7, Fedora >17; x86_64, i386 systems. The binary RPMs should install on most RPM systems without issue. Its common to perform the build process as dummy user.
+#### Build Procedure
+######Build platform is CentOS >6, or Fedora >17
  1. Install rpmdevtools.
  2. Clone repo `git clone https://github.com/CiscoCloud/distributive-rpm.git ~/rpmbuild`.
  3. Run `rpmdev-setuptree`. This will create the rest of ~/rpmbuild structure.
