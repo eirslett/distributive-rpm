@@ -17,8 +17,6 @@ Distributive is a tool for running distributed health checks in datacenters. It 
 
 %prep
 %setup -qn %{name}-%{version}
-# Copy JSONs to builddir
-#cp -p %%Source1 . 
 
 %build
 go build .
@@ -29,13 +27,20 @@ mkdir -p %{buildroot}%{_bindir}/
 mkdir -p %{buildroot}%{_datadir}/%{name}
 mkdir -p %{buildroot}%{_sysconfdir}/%{name}
 cp -p %{name}-%{version} %{buildroot}%{_bindir}/%{name}
-cp -p ./*.json %{buildroot}%{_datadir}/%{name}/
+cp -p %{_sourcedir}/*.json %{buildroot}%{_datadir}/%{name}/
 cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 
 
 %files
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
+%{_datadir}/%{name}/chronos.json
+%{_datadir}/%{name}/consul.json
+%{_datadir}/%{name}/dnsmasq.json
+%{_datadir}/%{name}/docker.json
+%{_datadir}/%{name}/nginx.json
+%{_datadir}/%{name}/vault.json
+%{_datadir}/%{name}/zookeeper.json
 %{_datadir}/%{name}/samples/
 %{_datadir}/%{name}/samples/docker-fail.json
 %{_datadir}/%{name}/samples/docker.json
