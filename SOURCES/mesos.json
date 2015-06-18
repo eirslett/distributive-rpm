@@ -4,11 +4,11 @@
     "Checklist" : [
         {
             "Check" : "dockerImage",
-            "Parameters" : ["docker.io/ciscocloud/mesos-consul"]
+            "Parameters" : ["mesos"]
         },
         {
             "Check" : "dockerRunning",
-            "Parameters" : ["ciscocloud/mesos-consul:v0.1.1"]
+            "Parameters" : ["mesos"]
         }
         {
             "Name": "mesos repo",
