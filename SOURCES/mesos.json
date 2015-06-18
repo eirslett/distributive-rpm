@@ -3,6 +3,14 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
+            "Check" : "dockerImage",
+            "Parameters" : ["docker.io/ciscocloud/mesos-consul"]
+        },
+        {
+            "Check" : "dockerRunning",
+            "Parameters" : ["ciscocloud/mesos-consul:v0.1.1"]
+        }
+        {
             "Name": "mesos repo",
             "Check": "repo",
             "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
