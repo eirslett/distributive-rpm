@@ -37,30 +37,30 @@
             "Check": "file",
             "Parameters": ["/etc/collectd.d/zookeeper.conf"]
         },
-	{
-	    "Name": "zookeeper client port",
-	    "Check": "TCP",
-	    "Parameters": ["localhost:2181"]
-	},
-	{
-	    "Name": "zookeeper follower port",
-	    "Check": "TCP",
-	    "Parameters": ["localhost:2888"]
-	},
-	{
-	    "Name": "zookeeper leader election port",
-	    "Check": "TCP",
-	    "Parameters": ["localhost:3888"]
-	},
-	{
-	    "Name": "zookeeper service active",
-	    "Check": "systemctlActive",
-	    "Parameters": ["zookeeper.service"]
-	},
-	{
-	    "Name": "zookeeper service loaded",
-	    "Check": "systemctlLoaded",
-	    "Parameters": ["zookeeper.service"]
-	}
+        {
+            "Name": "zookeeper client port",
+            "Check": "TCP",
+            "Parameters": ["localhost:2181"]
+        },
+        {
+            "Name": "zookeeper follower port",
+            "Check": "TCP",
+            "Parameters": ["localhost:2888"]
+        },
+        {
+            "Name": "zookeeper leader election port",
+            "Check": "TCP",
+            "Parameters": ["localhost:3888"]
+        },
+        {
+            "Name": "zookeeper service active",
+            "Check": "systemctlActive",
+            "Parameters": ["zookeeper.service"]
+        },
+        {
+            "Name": "zookeeper service loaded",
+            "Check": "systemctlLoaded",
+            "Parameters": ["zookeeper.service"]
+        }
     ]
 }
