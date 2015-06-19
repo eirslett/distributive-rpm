@@ -3,20 +3,9 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
-            "Name": "docker image",
-            "Check" : "dockerImage",
-            "Parameters" : ["marathon"]
-        },
-        {
-            "Name": "docker image",
-            "Check" : "dockerRunning",
-            "Parameters" : ["marathon"]
-        },
-        {
             "Name": "marathon client port",
             "Check": "TCP",
             "Parameters": ["localhost:8080"]
-
         },
         {
             "Name": "marathon repo",
