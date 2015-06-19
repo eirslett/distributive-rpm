@@ -1,5 +1,5 @@
 Name:		distributive
-Version:	0.1
+Version:	0.1.1
 Release:	1%{?dist}
 Summary:	Distributive was designed with Consul in mind to perform distributed health checks in datacenters
 
@@ -68,4 +68,4 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 %{_sysconfdir}/%{name}.d/
 
 %changelog
-
+# 19-Jun-15: Updated Version to 0.1.1
