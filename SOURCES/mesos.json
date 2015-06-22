@@ -3,13 +3,15 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
-            "Check" : "dockerImage",
-            "Parameters" : ["mesos"]
-        },
+            "Name": "mesos client port",
+            "Check": "TCP",
+            "Parameters": ["localhost:5050"]
+        },        
         {
-            "Check" : "dockerRunning",
-            "Parameters" : ["mesos"]
-        }
+           "Name": "mesos UI",
+           "Check": "responseMatches",
+           "Parameters":["https://localhost:5050","Active"]
+        },
         {
             "Name": "mesos repo",
             "Check": "repo",
