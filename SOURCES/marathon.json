@@ -8,6 +8,11 @@
             "Parameters": ["localhost:8080"]
         },
         {
+           "Name": "marathon UI",
+           "Check": "responseMatches",
+           "Parameters":["https://localhost:8080","marathon-consul"]
+        },
+        {
             "Name": "marathon repo",
             "Check": "repo",
             "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
