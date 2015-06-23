@@ -3,9 +3,9 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
-            "Name": "mesosphere repo present in yum",
-            "Check": "repo",
-            "Parameters": ["http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"]
+            "Name": "mesosphere repo installed",
+            "Check": "repoExists",
+            "Parameters": ["yum","mesosphere-noarch"]
         },
         {
             "Name": "chronos package installed",
