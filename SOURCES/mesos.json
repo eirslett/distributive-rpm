@@ -9,8 +9,8 @@
         },        
         {
            "Name": "mesos UI",
-           "Check": "responseMatches",
-           "Parameters":["https://localhost:5050","Active"]
+           "Check": "responseMatchesInsecure",
+           "Parameters":["https://localhost:5050","401"]
         },
         {
             "Name": "mesos repo",
