@@ -10,7 +10,7 @@
         {
             "Name": "consul running check",
             "Check": "running",
-            "Parameters": ["consul"]
+            "Parameters": ["/usr/bin/consul"]
         },
         {
             "Name": "consul health check configuration file check",
