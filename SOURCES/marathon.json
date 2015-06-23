@@ -9,8 +9,8 @@
         },
         {
            "Name": "marathon UI",
-           "Check": "responseMatches",
-           "Parameters":["https://localhost:8080","marathon-consul"]
+           "Check": "responseMatchesInsecure",
+           "Parameters":["https://localhost:8080","401"]
         },
         {
             "Name": "marathon repo",
