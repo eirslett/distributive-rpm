@@ -21,6 +21,21 @@
             "Name": "rsyslog configuration file",
             "Check": "file",
             "Parameters": ["/etc/rsyslog.conf"]
-        }
+        },
+	{
+	    "Name": "logstashd statsd port",
+	    "Check": "UDP",
+	    "Parameters": ["localhost:8125"]
+	},
+	{
+	    "Name": "logstashd collectd port",
+	    "Check": "UDP",
+	    "Parameters": ["localhost:25826"]
+	},
+	{
+	    "Name": "logstashd syslog port",
+	    "Check": "TCP",
+	    "Parameters": ["localhost:1514"]
+	}
     ]
 }

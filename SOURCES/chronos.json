@@ -66,6 +66,11 @@
             "Name": "chronos consul configuration",
             "Check": "file",
             "Parameters": ["/etc/consul-template/config.d/chronos-consul.cfg"]
-        }
+        },
+	{
+	    "Name": "chronos webUI port",
+	    "Check": "TCP",
+	    "Parameter": ["localhost:4400"]
+	}
     ]
 }

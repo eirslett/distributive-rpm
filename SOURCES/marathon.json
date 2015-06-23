@@ -3,9 +3,14 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
-            "Name": "marathon client port",
+            "Name": "marathon webUI port",
             "Check": "TCP",
             "Parameters": ["localhost:8080"]
+        },
+        {
+            "Name": "marathon consul port",
+            "Check": "TCP",
+            "Parameters": ["localhost:4000"]
         },
         {
            "Name": "marathon UI",
