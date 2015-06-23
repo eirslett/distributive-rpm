@@ -70,7 +70,7 @@
 	{
 	    "Name": "chronos webUI port",
 	    "Check": "TCP",
-	    "Parameter": ["localhost:4400"]
+	    "Parameters": ["localhost:4400"]
 	}
     ]
 }

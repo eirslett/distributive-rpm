@@ -9,7 +9,7 @@
         },
         {
             "Name": "consul-template configuration file",
-            "Check": "file",
+            "Check": "directory",
             "Parameters": ["/etc/consul-template/config.d"]
         },
         {

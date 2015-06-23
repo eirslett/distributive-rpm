@@ -30,7 +30,7 @@
         {
             "Name": "dnsmasq service enabled",
             "Check": "systemctlLoaded",
-            "Parameters": ["dnsmassq.service"]
+            "Parameters": ["dnsmasq.service"]
         },
         {
             "Name": "NetworkManager configuration exists",
