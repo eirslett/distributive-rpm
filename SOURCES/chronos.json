@@ -3,11 +3,6 @@
     "Notes": "For use with Microservice Infrastructure",
     "Checklist" : [
         {
-            "Name": "mesosphere repo installed",
-            "Check": "repoExists",
-            "Parameters": ["yum","mesosphere-noarch"]
-        },
-        {
             "Name": "chronos package installed",
             "Check": "installed",
             "Parameters": ["chronos"]

@@ -6,16 +6,11 @@
             "Name": "mesos client port",
             "Check": "TCP",
             "Parameters": ["localhost:5050"]
-        },        
+        },
         {
            "Name": "mesos UI",
            "Check": "responseMatchesInsecure",
            "Parameters":["https://localhost:5050","401"]
-        },
-        {
-            "Name": "mesos repo installed",
-            "Check": "repoExists",
-            "Parameters": ["yum","mesosphere-noarch"]
         },
         {
             "Name": "mesos installation",

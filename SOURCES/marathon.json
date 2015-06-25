@@ -18,11 +18,6 @@
            "Parameters":["https://localhost:8080","401"]
         },
         {
-            "Name": "marathon repo installed",
-            "Check": "repoExists",
-            "Parameters": ["yum","mesosphere-noarch"]
-        },
-        {
             "Name": "marathon installation",
             "Check": "installed",
             "Parameters": ["marathon"]
