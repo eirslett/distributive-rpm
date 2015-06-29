@@ -8,11 +8,6 @@
             "Parameters": ["consul"]
         },
         {
-            "Name": "consul running check",
-            "Check": "running",
-            "Parameters": ["/usr/bin/consul"]
-        },
-        {
             "Name": "consul health check configuration file check",
             "Check": "file",
             "Parameters": ["/etc/consul/consul.json"]
