@@ -1,5 +1,5 @@
 Name:		distributive
-Version:	0.1.2
+Version:	0.2
 Release:	1%{?dist}
 Summary:	Distributive was designed with Consul in mind to perform distributed health checks in datacenters
 
@@ -8,7 +8,7 @@ URL:		https://github.com/CiscoCloud/distributive
 Source0:	https://github.com/CiscoCloud/distributive/archive/v%{version}.tar.gz
 
 BuildRequires:	golang
-#Requires:	
+#Requires:
 # Debug info isn't really needed at this time
 %global debug_package %{nil}
 
@@ -63,6 +63,8 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 %{_datadir}/%{name}/samples/packages.json
 %{_datadir}/%{name}/samples/systemctl-fail.json
 %{_datadir}/%{name}/samples/systemctl.json
+%{_datadir}/%{name}/samples/usage-fail.json
+%{_datadir}/%{name}/samples/usage.json
 %{_datadir}/%{name}/samples/users-and-groups-fail.json
 %{_datadir}/%{name}/samples/users-and-groups.json
 %{_sysconfdir}/%{name}.d/
@@ -70,3 +72,4 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 %changelog
 # 19-Jun-15: Updated Version to 0.1.1
 # 25-Jun-15: Updated Version to 0.1.2
+# 07-Jul-15: Updated Version to 0.2, updated %files to match
