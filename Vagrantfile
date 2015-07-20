@@ -7,15 +7,16 @@
 # you're doing.
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "centos/7"
-  config.vm.hostname = "mi-rpmbuild"
+    config.vm.box = "centos-7.0-base"
+    config.vm.hostname = "mi-rpmbuild"
 
-  config.vm.provider "virtualbox" do |vb|
-     vb.memory = "1536"
-     vb.name = "mi-rpmbuild"
-  end
+    config.vm.synced_folder '.', '/home/vagrant/rpmbuild/', create: true, owner: "vagrant"
 
-  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
-  config.vm.provision "shell", privileged: false, path: "provisioning/setup_mi-rpmbuild.sh" 
+    config.vm.provider "virtualbox" do |vb|
+        vb.memory = "1536"
+        vb.name = "mi-rpmbuild"
+    end
 
+    config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
+    config.vm.provision "shell", privileged: false, path: "provision.sh"
 end

@@ -1,6 +1,6 @@
 Name:           distributive
 Version:        master
-Release:        20150710git.master%{?dist}
+Release:        20150720git.master%{?dist}
 Summary:        Distributive was designed with Consul in mind to perform distributed health checks in datacenters
 
 License:        ASL 2.0:

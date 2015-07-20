@@ -1,5 +1,5 @@
 Name:		distributive
-Version:	0.2
+Version:	0.2.1
 Release:	1%{?dist}
 Summary:	Distributive was designed with Consul in mind to perform distributed health checks in datacenters
 
@@ -20,17 +20,16 @@ Distributive is a tool for running distributed health checks in datacenters. It 
 %setup -qn %{name}-%{version}
 
 %build
-go build .
+./build.sh
 
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_bindir}/
 mkdir -p %{buildroot}%{_datadir}/%{name}
 mkdir -p %{buildroot}%{_sysconfdir}/%{name}.d
-cp -p %{name}-%{version} %{buildroot}%{_bindir}/%{name}
+cp -p bin/%{name} %{buildroot}%{_bindir}/%{name}
 cp -p %{_sourcedir}/*.json %{buildroot}%{_datadir}/%{name}/
 cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
-
 
 %files
 %{_bindir}/%{name}
@@ -73,3 +72,4 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 # 19-Jun-15: Updated Version to 0.1.1
 # 25-Jun-15: Updated Version to 0.1.2
 # 07-Jul-15: Updated Version to 0.2, updated %files to match
+# 20-Jul-15: Updated Version to 0.2.1
