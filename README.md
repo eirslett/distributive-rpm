@@ -8,11 +8,11 @@ All static checklists should be installed to `/usr/share/distributive/`, with
 samples in `/usr/share/distributive/samples`. The static checklists can be
 symlinked by their individual roles into `/etc/distributive.d/`.
 
-#### Build Procedure
+## Build Procedure
 ```shell
-git clone https://github.com/CiscoCloud/distributive-rpm.git
-cd distributive-rpm
-vagrant up
+$ git clone https://github.com/CiscoCloud/distributive-rpm.git
+$ cd distributive-rpm
+$ vagrant up
 ```
 should take care of it. This sets up a synced folder with the VM's `~/rpmbuild`
 directory, so the RPMs build will be copied automatically to the host. If you're
@@ -29,3 +29,6 @@ build process as dummy user.
 ## Contributing
 This RPM is in a stable condition. Head over to [Distributive] [distributive]
 or [Microservices-Infrastructure] [MI] to see how you can help!
+
+[distributive]: https://github.com/CiscoCloud/distributive
+[MI]: https://github.com/CiscoCloud/microservices-infrastructure/
