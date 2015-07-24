@@ -31,11 +31,6 @@
             "Name": "vault port open",
             "Check": "port",
             "Parameters": ["8200"]
-        },
-        {
-            "Name": "vault unseal script",
-            "Check": "file",
-            "Parameters": ["/etc/vault/vault.unseal"]
         }
     ]
 }

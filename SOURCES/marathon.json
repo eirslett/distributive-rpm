@@ -13,11 +13,6 @@
             "Parameters": ["localhost:4000"]
         },
         {
-           "Name": "marathon UI",
-           "Check": "responseMatchesInsecure",
-           "Parameters":["https://localhost:8080","401"]
-        },
-        {
             "Name": "marathon installation",
             "Check": "installed",
             "Parameters": ["marathon"]

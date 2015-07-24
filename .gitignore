@@ -1,5 +1,7 @@
 *.rpm
 *.bak
+*.zip
+*.tar.gz
 BUILD/
 BUILDROOT/
 RPMS/
