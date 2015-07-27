@@ -13,11 +13,6 @@
             "Parameters": ["/usr/lib/systemd/system/vault.service"]
         },
         {
-            "Name": "vault configuration file",
-            "Check": "file",
-            "Parameters": ["/etc/vault/vault.config"]
-        },
-        {
             "Name": "vault systemd service enabled",
             "Check": "systemctlLoaded",
             "Parameters": ["vault.service"]

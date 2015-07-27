@@ -38,11 +38,6 @@
             "Parameters": ["/etc/marathon/conf/zk"]
         },
         {
-            "Name": "marathon ssl_keystore_password configuration",
-            "Check": "file",
-            "Parameters": ["/etc/marathon/conf/ssl_keystore_password"]
-        },
-        {
             "Name": "marathon http_port configuration",
             "Check": "file",
             "Parameters": ["/etc/marathon/conf/http_port"]
