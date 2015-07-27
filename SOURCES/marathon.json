@@ -68,11 +68,6 @@
             "Parameters": ["/etc/collectd.d/marathon.conf"]
         },
         {
-            "Name": "marathon secret file",
-            "Check": "file",
-            "Parameters": ["/etc/marathon/mesos_authentication_secret"]
-        },
-        {
             "Name": "marathon nginx configuration",
             "Check": "file",
             "Parameters": ["/etc/marathon/marathon.nginx"]

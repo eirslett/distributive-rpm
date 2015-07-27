@@ -13,11 +13,6 @@
             "Parameters": ["/usr/lib/systemd/system/vault.service"]
         },
         {
-            "Name": "vault configuration directory",
-            "Check": "directory",
-            "Parameters": ["/etc/vault"]
-        },
-        {
             "Name": "vault configuration file",
             "Check": "file",
             "Parameters": ["/etc/vault/vault.config"]

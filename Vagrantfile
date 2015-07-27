@@ -10,13 +10,20 @@ Vagrant.configure(2) do |config|
     config.vm.box = "centos-7.0-base"
     config.vm.hostname = "mi-rpmbuild"
 
-    config.vm.synced_folder '.', '/home/vagrant/rpmbuild/', create: true, owner: "vagrant"
+    config.vm.synced_folder './RPMS', '/home/vagrant/rpmbuild/RPMS',
+        create: true,
+        owner: "vagrant"
+    config.vm.synced_folder './SOURCES', '/home/vagrant/rpmbuild/SOURCES',
+        create: true,
+        owner: "vagrant"
+    config.vm.synced_folder './SPECS', '/home/vagrant/rpmbuild/SPECS',
+        create: true,
+        owner: "vagrant"
 
     config.vm.provider "virtualbox" do |vb|
         vb.memory = "1536"
         vb.name = "mi-rpmbuild"
     end
 
-    config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
     config.vm.provision "shell", privileged: false, path: "provision.sh"
 end
