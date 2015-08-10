@@ -42,6 +42,7 @@ cp -pr samples/ %{buildroot}%{_datadir}/%{name}/
 %{_datadir}/%{name}/dnsmasq.json
 %{_datadir}/%{name}/docker.json
 %{_datadir}/%{name}/haproxy.json
+%{_datadir}/%{name}/iptables.json
 %{_datadir}/%{name}/logrotate.json
 %{_datadir}/%{name}/logstash.json
 %{_datadir}/%{name}/marathon.json

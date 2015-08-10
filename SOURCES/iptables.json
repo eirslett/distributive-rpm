@@ -1,0 +1,21 @@
+{
+  "Name": "iptables health check",
+  "Notes": "For use with Microservice Infrastructure",
+  "Checklist" : [
+    {
+      "Name": "consul-template systemd service enabled",
+      "Check": "systemctlLoaded",
+      "Parameters": ["consul-template.service"]
+    },
+    {
+      "Name": "iptables configuration for consul-template file check",
+      "Check": "file",
+      "Parameters": ["/etc/consul-template/config.d/iptables-core.cfg"]
+    },
+    {
+      "Name": "iptables template file check",
+      "Check": "file",
+      "Parameters": ["/etc/consul-template/templates/iptables-core.tmpl"]
+    }
+  ]
+}
